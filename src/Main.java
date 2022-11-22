@@ -1,22 +1,36 @@
+// 문제 : 구구단을 만들어주세요
+// 출력양식
+/*
+== 2단 ==
+2 * 1 = 2
+2 * 2 = 4
+2 * 3 = 6
+...
+== 9단 ==
+9 * 1 = 9
+...
+9 * 9 = 81
+*/
+
 class Main {
 	public static void main(String[] args) {
-		int n1 = 10;
-		int n2 = 20;
-		int n3 = 30;
-		int n4 = 40;
-		// 배열 생성
-		int[] all = new int[] { n1, n2, n3, n4 };
-
-		System.out.println("== 일반 반복 ==");
-		for (int i = 0; i < all.length; i++) {
-			System.out.println(all[i]);
-		}
-
-		System.out.println("== for each 사용 ==");
-
-		for (int n : all) {
-			System.out.println(n);
-		}
-
+		new 구구단출력기().작동();
 	}
+}
+
+class 구구단출력기 {
+	// 구현시작
+	void 작동() {
+		int dan = 2;
+		while (dan <= 9) {
+			System.out.println(" == " + dan + "단== ");
+			int i = 1;
+			while (i <= 9) {
+				System.out.println(dan + " * " + i + " = " + dan * i);
+				i++;
+			}
+			dan++;
+		}
+	}
+	// 구현끝
 }
