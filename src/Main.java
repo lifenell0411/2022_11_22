@@ -1,36 +1,21 @@
-// 문제 : 구구단을 만들어주세요
-// 출력양식
-/*
-== 2단 ==
-2 * 1 = 2
-2 * 2 = 4
-2 * 3 = 6
-...
-== 9단 ==
-9 * 1 = 9
-...
-9 * 9 = 81
-*/
+// 문제 : 아래와 같이 출력해주세요.
+// 문제 : 단을 * 1000까지 출력해주세요.
+// 조건 : 곱하는 순서를 거꾸로 해주세요.
 
 class Main {
 	public static void main(String[] args) {
-		new 구구단출력기().작동();
-	}
-}
+		int dan = 8;
 
-class 구구단출력기 {
-	// 구현시작
-	void 작동() {
-		int dan = 2;
-		while (dan <= 9) {
-			System.out.println(" == " + dan + "단== ");
-			int i = 1;
-			while (i <= 9) {
-				System.out.println(dan + " * " + i + " = " + dan * i);
-				i++;
-			}
-			dan++;
+		int i = 1000;
+
+		while (i >= 1) {
+			System.out.println(dan + " * " + i + " = " + dan * i);
+			i--;
+
 		}
+		// 출력
+		/*
+		 * 8 * 1000 = 8000 ... 8 * 1 = 8
+		 */
 	}
-	// 구현끝
 }
